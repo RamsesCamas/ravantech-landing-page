@@ -1,0 +1,127 @@
+"use client"
+import { useState } from "react";
+
+export const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleToggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  return (
+    <>
+      <nav className="bg-alt-white h-[60px] xl:h-[85px] flex justify-between items-center px-[30px] md:px-[40px] xl:px-[100px] 2xl:px-[200px]">
+        <img
+          src="/icons/ravantech.svg"
+          alt="RavanTech logo"
+          width={113.4}
+          height={30}
+          className="xl:w-auto xl:h-[50px]"
+
+        />
+
+        <ul className="hidden md:flex md:items-center md:gap-x-7 md:font-sora md:font-semibold md:text-[13px] xl:text-[17px]">
+          <li className="hover:text-secondary-purple">
+            <a href="#about-us">Sobre nosotros</a>
+          </li>
+          <li className="hover:text-secondary-purple">
+            <a href="#services">Servicios</a>
+          </li>
+          <li className="hover:text-secondary-purple">
+            <a href="#clients">Clientes</a>
+          </li>
+          <li className="hover:text-secondary-purple">
+            <a href="contact">Contacto</a>
+          </li>
+          <li className="flex gap-x-4">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/icons/facebook-2.svg"
+                alt="Facebook icon"
+                width={25}
+                height={25}
+                className="xl:w-auto xl:h-[30px]"
+              />
+            </a>
+            <a href="https://www.instagram.com/ravantech.xr/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/icons/instagram-2.svg"
+                alt="Instagram icon"
+                width={25}
+                height={25}
+                className="xl:w-auto xl:h-[30px]"
+              />
+            </a>
+          </li>
+        </ul>
+  
+        <button className="cursor-pointer md:hidden" onClick={handleToggleMenu}>
+          <img
+            src="/icons/menu.svg"
+            alt="Menu icon"
+            width={22}
+            height={22}
+          />
+        </button>
+      </nav>
+
+      {menuOpen && (
+        <div className="bg-main-purple w-full h-screen fixed top-0 left-0 flex flex-col justify-center items-center text-center">
+          <button
+            className="cursor-pointer absolute top-[40px] right-[40px]"
+            onClick={handleToggleMenu}
+          >
+            <img
+              src="/icons/close-menu.svg"
+              alt="Close menu icon"
+              width={35}
+              height={35}
+            />
+          </button>
+
+          <ul className="flex flex-col gap-y-[40px] text-white font-sora font-bold text-xl">
+            <li>
+              <a href="#about-us">Sobre nosotros</a>
+            </li>
+            <li>
+              <a href="#services">Servicios</a>
+            </li>
+            <li>
+              <a href="#clients">Clientes</a>
+            </li>
+            <li>
+              <a href="contact">Contacto</a>
+            </li>
+          </ul>
+
+          <div className="flex gap-x-[40px] absolute bottom-[50px]">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/icons/facebook.svg"
+                alt="Facebook icon"
+                width={30}
+                height={30}
+              />
+            </a>
+            <a href="https://www.instagram.com/ravantech.xr/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/icons/instagram.svg"
+                alt="Instagram icon"
+                width={30}
+                height={30}
+              />
+            </a>
+            <a href="https://www.linkedin.com/company/ravan-tech/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/icons/linkedin.svg"
+                alt="LinkedIn icon"
+                width={30}
+                height={30}
+              />
+            </a>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
