@@ -10,17 +10,17 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-alt-white h-[60px] xl:h-[85px] flex justify-between items-center px-[30px] md:px-[40px] xl:px-[100px] 2xl:px-[200px]">
+      <nav className="bg-alt-white h-[70px] xl:h-[85px] flex justify-between items-center px-[30px] md:px-[40px] xl:px-[100px] 2xl:px-[200px]">
         <img
           src="/icons/ravantech.svg"
           alt="RavanTech logo"
-          width={113.4}
-          height={30}
+          width={132.3}
+          height={35}
           className="xl:w-auto xl:h-[50px]"
 
         />
 
-        <ul className="hidden md:flex md:items-center md:gap-x-7 md:font-sora md:font-semibold md:text-[13px] xl:text-[17px]">
+        <ul className="hidden md:flex md:items-center md:gap-x-4 lg:gap-x-7 md:font-sora md:font-semibold md:text-[15.5px] xl:text-[17px]">
           <li className="hover:text-secondary-purple">
             <a href="#about-us">Sobre nosotros</a>
           </li>
@@ -38,18 +38,18 @@ export const Navbar = () => {
               <img
                 src="/icons/facebook-2.svg"
                 alt="Facebook icon"
-                width={25}
-                height={25}
-                className="xl:w-auto xl:h-[30px]"
+                width={22}
+                height={22}
+                className="xl:w-auto xl:h-[25px]"
               />
             </a>
             <a href="https://www.instagram.com/ravantech.xr/" target="_blank" rel="noopener noreferrer">
               <img
                 src="/icons/instagram-2.svg"
                 alt="Instagram icon"
-                width={25}
-                height={25}
-                className="xl:w-auto xl:h-[30px]"
+                width={22}
+                height={22}
+                className="xl:w-auto xl:h-[25px]"
               />
             </a>
           </li>
@@ -59,8 +59,8 @@ export const Navbar = () => {
           <img
             src="/icons/menu.svg"
             alt="Menu icon"
-            width={22}
-            height={22}
+            width={25}
+            height={25}
           />
         </button>
       </nav>
