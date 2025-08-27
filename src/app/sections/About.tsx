@@ -17,7 +17,6 @@ export const About = () => {
             alt="Imagen de portada"
             width={400}
             height={285}
-            priority
             sizes="(max-width: 699px) 375px,
                 (max-width: 1199px) 350px,
                 (max-width: 1399px) 400px,
