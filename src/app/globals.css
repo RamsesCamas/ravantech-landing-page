@@ -24,6 +24,11 @@
   --font-nunito-sans: Nunito_Sans, sans-serif;
 }
 
+@keyframes slider-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 body {
   background: var(--magnolia);
   color: var(--night);

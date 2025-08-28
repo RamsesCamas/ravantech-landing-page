@@ -61,7 +61,7 @@ export const Services = () => {
                 <ModelViewer
                   src={service.model}            // o el de cada servicio
                   height={180}                   // alto del canvas en la card
-                  fillY={0.6}                    // ocupa ~90% de la altura visible
+                  fillY={0.5}                    // ocupa ~90% de la altura visible
                   align="center"                 // apoyado abajo
                   autoRotate
                 />
@@ -105,7 +105,7 @@ export const Services = () => {
                       <ModelViewer
                         src={service.model}            // o el de cada servicio
                         height={180}                   // alto del canvas en la card
-                        fillY={0.6}                    // ocupa ~90% de la altura visible
+                        fillY={0.5}                    // ocupa ~90% de la altura visible
                         align="center"                 // apoyado abajo
                         autoRotate
                       />
