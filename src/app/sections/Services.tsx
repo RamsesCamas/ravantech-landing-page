@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
 import { useState, useCallback, useMemo, useRef } from "react";
-import { SERVICES } from '@/constants/services';
+import BrowserOnly from "@/components/BrowserOnly";
+import ModelViewer from "@/components/ModelViewer";
+import { SERVICES } from "@/constants/services";
 
 export const Services = () => {
   const [index, setIndex] = useState(0);
@@ -55,6 +57,15 @@ export const Services = () => {
             className="rounded-xl border bg-main-purple px-[30px] py-[25px]"
           >
             <div className="flex flex-col text-white text-center">
+              <BrowserOnly>
+                <ModelViewer
+                  src={service.model}            // o el de cada servicio
+                  height={180}                   // alto del canvas en la card
+                  fillY={0.6}                    // ocupa ~90% de la altura visible
+                  align="center"                 // apoyado abajo
+                  autoRotate
+                />
+              </BrowserOnly>
               <h3 className="font-sora font-bold text-[16px] xl:text-[20px] my-[15px]">{service.title}</h3>
               <p className="font-nunito-sans font-light text-[14px] xl:text-[18px]">{service.description}</p>
             </div>
@@ -81,7 +92,7 @@ export const Services = () => {
             className="flex transition-transform duration-300 ease-out will-change-transform"
             style={{ transform: `translateX(-${index * 100}%)` }}
           >
-            {SERVICES.map((service) => (
+            {SERVICES.map((service, i) => (
               <article
                 key={service.id}
                 className="min-w-full bg-main-purple px-[30px] py-[25px]"
@@ -89,6 +100,17 @@ export const Services = () => {
                 aria-label={`${SERVICES.indexOf(service) + 1} de ${total}: ${service.title}`}
               >
                 <div className="flex flex-col text-white text-center">
+                  <BrowserOnly>
+                    {i === index && (
+                      <ModelViewer
+                        src={service.model}            // o el de cada servicio
+                        height={180}                   // alto del canvas en la card
+                        fillY={0.6}                    // ocupa ~90% de la altura visible
+                        align="center"                 // apoyado abajo
+                        autoRotate
+                      />
+                    )}
+                  </BrowserOnly>
                   <h3 className="font-sora font-bold text-[16px] my-[15px]">{service.title}</h3>
                   <p className="font-nunito-sans font-light text-[14px]">{service.description}</p>
                 </div>
@@ -130,9 +152,9 @@ export const Services = () => {
               onClick={() => setIndex(i)}
               aria-label={`Ir a la tarjeta ${i + 1}`}
               className={[
-                'h-2 w-2 rounded-full border',
-                i === index ? 'bg-main-purple' : 'opacity-40',
-              ].join(' ')}
+                "h-2 w-2 rounded-full border",
+                i === index ? "bg-main-purple" : "opacity-40",
+              ].join(" ")}
             />
           ))}
         </div>
