@@ -10,7 +10,7 @@ export const Alliances = () => {
 
       <InfiniteSlider
         images={ALLIANCES}
-        speedSec={35}
+        speedSec={50}
         direction="left"
         heightPx={65}
         gapPx={28}

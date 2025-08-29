@@ -1,13 +1,20 @@
 "use client";
 import Image from "next/image";
-import { useState, useCallback, useMemo, useRef } from "react";
+import { useState, useCallback, useMemo, useRef, useEffect  } from "react";
 import BrowserOnly from "@/components/BrowserOnly";
 import ModelViewer from "@/components/ModelViewer";
 import { SERVICES } from "@/constants/services";
+import { useGLTF } from "@react-three/drei";
 
 export const Services = () => {
   const [index, setIndex] = useState(0);
   const total = SERVICES.length;
+
+  useEffect(() => {
+    try {
+      SERVICES.forEach(s => useGLTF.preload?.(s.model));
+    } catch { }
+  }, []);
 
   const goNext = useCallback(() => setIndex(i => (i + 1) % total), [total]);
   const goPrev = useCallback(() => setIndex(i => (i - 1 + total) % total), [total]);
@@ -45,31 +52,33 @@ export const Services = () => {
       </h2>
 
       {/* ===== Grid tablet/desktop ===== */}
-      <div
-        className="
-          mt-[25px] hidden md:grid grid-rows-3 md:grid-cols-2 gap-6
-          lg:grid-rows-2 lg:grid-cols-3
-        "
-      >
+      <div className="mt-[25px] hidden md:grid grid-rows-3 md:grid-cols-2 gap-x-6 gap-y-14 lg:grid-rows-2 lg:grid-cols-3">
         {SERVICES.map((service) => (
-          <article
-            key={service.id}
-            className="rounded-xl border bg-main-purple px-[30px] py-[25px]"
-          >
-            <div className="flex flex-col text-white text-center">
+          <figure key={service.id} className="relative flex flex-col items-center">
+            <div className="absolute inset-x-0 -top-20 flex justify-center pointer-events-auto">
               <BrowserOnly>
                 <ModelViewer
-                  src={service.model}            // o el de cada servicio
-                  height={180}                   // alto del canvas en la card
-                  fillY={0.5}                    // ocupa ~90% de la altura visible
-                  align="center"                 // apoyado abajo
+                  src={service.model}
+                  height={170}
+                  fillY={0.5}
+                  align="center"
                   autoRotate
+                  className="w-[220px] max-w-full"
                 />
               </BrowserOnly>
-              <h3 className="font-sora font-bold text-[16px] xl:text-[20px] my-[15px]">{service.title}</h3>
-              <p className="font-nunito-sans font-light text-[14px] xl:text-[18px]">{service.description}</p>
             </div>
-          </article>
+
+            <article className="w-full h-full rounded-xl border bg-main-purple px-[25px] py-[25px] pt-20">
+              <div className="flex flex-col text-white text-center">
+                <h3 className="font-sora font-bold text-[16px] xl:text-[18px] mt-[10px]">
+                  {service.title}
+                </h3>
+                <p className="font-nunito-sans font-light text-[14px] xl:text-[16px] mt-2">
+                  {service.description}
+                </p>
+              </div>
+            </article>
+          </figure>
         ))}
       </div>
 
@@ -82,39 +91,48 @@ export const Services = () => {
       >
         {/* Viewport */}
         <div
-          className="relative overflow-hidden rounded-xl border"
+          className="relative overflow-hidden rounded-xl"
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
         >
+          <div className="absolute inset-x-0 -top-7 z-10 flex justify-center pointer-events-auto">
+            <BrowserOnly>
+              <ModelViewer
+                src={current.model}
+                height={150}
+                fillY={0.5}
+                align="center"
+                autoRotate
+                orbit={true}
+                className="w-[190px] max-w-full"
+              />
+            </BrowserOnly>
+          </div>
+
           {/* Track */}
           <div
             className="flex transition-transform duration-300 ease-out will-change-transform"
             style={{ transform: `translateX(-${index * 100}%)` }}
           >
-            {SERVICES.map((service, i) => (
-              <article
+            {SERVICES.map((service) => (
+              <div
                 key={service.id}
-                className="min-w-full bg-main-purple px-[30px] py-[25px]"
+                className="flex min-w-full pt-[25px] bg-transparent"
                 aria-roledescription="slide"
                 aria-label={`${SERVICES.indexOf(service) + 1} de ${total}: ${service.title}`}
               >
-                <div className="flex flex-col text-white text-center">
-                  <BrowserOnly>
-                    {i === index && (
-                      <ModelViewer
-                        src={service.model}            // o el de cada servicio
-                        height={180}                   // alto del canvas en la card
-                        fillY={0.5}                    // ocupa ~90% de la altura visible
-                        align="center"                 // apoyado abajo
-                        autoRotate
-                      />
-                    )}
-                  </BrowserOnly>
-                  <h3 className="font-sora font-bold text-[16px] my-[15px]">{service.title}</h3>
-                  <p className="font-nunito-sans font-light text-[14px]">{service.description}</p>
-                </div>
-              </article>
+                <figure className="relative flex flex-col items-center">
+                  <article className="w-full h-full rounded-xl border bg-main-purple px-[25px] pb-[25px] pt-20 text-white text-center">
+                    <h3 className="font-sora font-bold text-[16px] my-[10px]">
+                      {service.title}
+                    </h3>
+                    <p className="font-nunito-sans font-light text-[14px]">
+                      {service.description}
+                    </p>
+                  </article>
+                </figure>
+              </div>
             ))}
           </div>
         </div>

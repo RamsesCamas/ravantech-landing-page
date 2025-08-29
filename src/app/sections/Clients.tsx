@@ -13,7 +13,7 @@ export const Clients = () => {
 
       <InfiniteSlider
         images={CLIENTS}
-        speedSec={35}
+        speedSec={50}
         direction="left"
         heightPx={80}
         gapPx={28}
