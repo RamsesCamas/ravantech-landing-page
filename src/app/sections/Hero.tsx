@@ -17,7 +17,7 @@ export const Hero = () => {
           Desarrollamos soluciones innovadoras con realidad virtual, mixta, aumentada, videojuegos e inteligencia artificial para transformar tu empresa.
         </p>
 
-        <a className="bg-secondary-purple py-[15px] px-[20px] rounded-xl cursor-pointer font-sora font-bold text-[16px] xl:text-[22px] hover:brightness-97">
+        <a className="bg-[#D3C1FE] py-[16px] px-[22px] rounded-xl cursor-pointer font-sora font-bold text-[16px] text-[#372466] xl:text-[20px] hover:brightness-97">
           Contáctanos
         </a>
       </div>

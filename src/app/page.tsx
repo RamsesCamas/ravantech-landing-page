@@ -4,6 +4,7 @@ import { About } from "./sections/About";
 import { Services } from "./sections/Services";
 import { Clients } from "./sections/Clients";
 import { Alliances } from "./sections/Alliances";
+import { Team } from "./sections/Team";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Services/>
       <Clients/>
       <Alliances/>
+      <Team/>
     </div>
   );
 };

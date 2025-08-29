@@ -53,7 +53,7 @@ export default function InfiniteSlider({
               src={img.src}
               alt={img.alt ?? ""}
               width={320}
-              height={heightPx}
+              height={100}
               sizes="(max-width: 768px) 70vw, 40vw"
               className="h-[var(--h)] w-auto rounded-xl object-cover opacity-45"
               style={{ ["--h" as any]: `${heightPx}px` }}

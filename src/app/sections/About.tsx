@@ -13,7 +13,7 @@ export const About = () => {
       <div className="flex flex-col-reverse md:flex-row justify-center items-center"> 
         <div className="md:flex md:justify-center md:w-[50%]">
           <Image
-            src="/images/about.jpg"
+            src="/images/about.webp"
             alt="Imagen de portada"
             width={400}
             height={285}
