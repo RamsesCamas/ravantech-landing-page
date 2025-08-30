@@ -20,11 +20,9 @@ export default function TeamCard({ member }: Props) {
     >
       <div
         className={clsx(
-          "relative h-[360px] sm:h-[380px] md:h-[400px] lg:h-[420px] w-full",
+          "relative h-[360px] md:h-[400px] lg:h-[420px] w-full",
           "perspective",
         )}
-        /* usando utilidades arbitrarias de Tailwind para 3D */
-        style={{ perspective: "1000px" }}
       >
         <div
           className={clsx(
@@ -37,41 +35,41 @@ export default function TeamCard({ member }: Props) {
         >
           {/* Frente */}
           <div
-            className="absolute inset-0 rounded-xl overflow-hidden shadow-sm bg-main-purple"
+            className="absolute inset-0 rounded-xl overflow-hidden bg-white border border-gray-border"
             style={{ backfaceVisibility: "hidden" }}
           >
-            <div className="relative h-2/3 w-full">
+            <div className="relative h-[82.5%] w-full">
               <Image
                 src={member.imageSrc}
                 alt={member.imageAlt ?? member.name}
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 700px) 100vw, 33vw"
                 priority={false}
               />
             </div>
-            <div className="h-1/3 w-full p-4 flex flex-col items-start justify-center text-white">
-              <h3 className="text-lg font-semibold">{member.name}</h3>
-              <p className="text-sm">{member.role}</p>
+            <div className="h-[17.5%] w-full py-[10px] px-[20px] flex flex-col items-center justify-center font-nunito-sans">
+              <h3 className="font-bold text-main-purple text-[16px] md:text-[18px]">{member.name}</h3>
+              <p className="font-bold text-secondary-purple text-[14px] md:text-[16px] line-clamp-1">{member.role}</p>
             </div>
           </div>
 
           {/* Reverso */}
           <div
-            className="absolute inset-0 rounded-xl overflow-hidden shadow-sm bg-main-purple text-white p-4 flex flex-col text-start"
+            className="absolute inset-0 rounded-xl overflow-hidden bg-main-purple text-white py-[20px] px-[25px] flex flex-col font-nunito-sans text-start"
             style={{
               transform: "rotateY(180deg)",
               backfaceVisibility: "hidden",
             }}
           >
-            <div className="mb-2">
-              <h3 className="text-lg font-semibold">{member.name}</h3>
-              <p className="text-sm">{member.role}</p>
+            <div className="mb-[15px]">
+              <h3 className="font-bold text-[18px]">{member.name}</h3>
+              <p className="font-regular text-[16px]">{member.role}</p>
             </div>
-            <p className="text-sm leading-relaxed line-clamp-6 flex-1">
+            <p className="text-[14px] flex-1">
               {member.bio}
             </p>
-            <div className="mt-4 flex items-center gap-3">
+            <div className="mt-4 flex items-center gap-x-[15px]">
               {member.socials.map((s) => (
                 <a
                   key={s.platform}
@@ -80,13 +78,13 @@ export default function TeamCard({ member }: Props) {
                   rel="noreferrer"
                   aria-label={s.alt ?? s.platform}
                   className="inline-flex"
-                  onClick={(e) => e.stopPropagation()} // para no volver a voltear al hacer click
+                  onClick={(e) => e.stopPropagation()}
                 >
                   <Image
                     src={s.iconSrc}
                     alt={s.alt ?? s.platform}
-                    width={22}
-                    height={22}
+                    width={24}
+                    height={24}
                   />
                 </a>
               ))}
@@ -95,16 +93,11 @@ export default function TeamCard({ member }: Props) {
         </div>
       </div>
 
-      {/* Tip visual accesible */}
       <span className="sr-only">
         {flipped ? "Ocultar detalles" : "Mostrar detalles"}
       </span>
     </button>
   );
-}
+};
 
-/* Helpers de clase para el flip (con Tailwind mediante utilidades arbitrarias) */
-/* Nota: estas clases usan CSS-in-JS inline arriba para preserve-3d/backface. */
-declare global {
-  // Agregamos definiciones para evitar errores de TS si usas CSS Modules, opcional.
-}
+declare global { }

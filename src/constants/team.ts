@@ -19,7 +19,7 @@ export const TEAM: Member[] = [
   {
     id: "1",
     name: "Viviana Rojo",
-    role: "CEO",
+    role: "Directora de Transformación Digital",
     imageSrc: "/images/team/ana.jpg",
     imageAlt: "Foto de Viviana Rojo",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula elit, ultricies in ullamcorper at, consequat vel neque.",
@@ -31,7 +31,7 @@ export const TEAM: Member[] = [
   {
     id: "2",
     name: "Ramsés Camas",
-    role: "CEO",
+    role: "CTO",
     imageSrc: "/images/team/ana.jpg",
     imageAlt: "Foto de Ramsés Camas",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula elit, ultricies in ullamcorper at, consequat vel neque.",
@@ -43,7 +43,7 @@ export const TEAM: Member[] = [
   {
     id: "3",
     name: "Daniel Ríos",
-    role: "CEO",
+    role: "Coordinador de Desarrollo Tecnológico",
     imageSrc: "/images/team/ana.jpg",
     imageAlt: "Foto de Daniel Ríos",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula elit, ultricies in ullamcorper at, consequat vel neque.",
@@ -67,7 +67,7 @@ export const TEAM: Member[] = [
   {
     id: "5",
     name: "Luis Hernández",
-    role: "CEO",
+    role: "Coordinador de Experiencia Digital",
     imageSrc: "/images/team/ana.jpg",
     imageAlt: "Foto de Luis Hernández",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula elit, ultricies in ullamcorper at, consequat vel neque.",
@@ -79,7 +79,7 @@ export const TEAM: Member[] = [
   {
     id: "6",
     name: "Alejandro Camas",
-    role: "CEO",
+    role: "Consultor de Tecnología",
     imageSrc: "/images/team/ana.jpg",
     imageAlt: "Foto de Alejandro Camas",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula elit, ultricies in ullamcorper at, consequat vel neque.",

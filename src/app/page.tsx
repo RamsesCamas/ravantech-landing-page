@@ -12,7 +12,7 @@ export default function Home() {
       <Navbar/>
       <Hero/>
       <About/>
-      <Services/>
+      {/* <Services/> */}
       <Clients/>
       <Alliances/>
       <Team/>
