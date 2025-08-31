@@ -17,7 +17,6 @@ export const Navbar = () => {
           width={132.3}
           height={35}
           className="xl:w-auto xl:h-[50px]"
-
         />
 
         <ul className="hidden md:flex md:items-center md:gap-x-4 lg:gap-x-7 md:font-sora md:font-semibold md:text-[15.5px] xl:text-[17px]">

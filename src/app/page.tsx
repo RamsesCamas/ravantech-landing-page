@@ -6,6 +6,7 @@ import { Clients } from "./sections/Clients";
 import { Alliances } from "./sections/Alliances";
 import { Team } from "./sections/Team";
 import { Contact } from "./sections/Contact";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Alliances/>
       <Team/>
       <Contact/>
+      <Footer/>
     </div>
   );
 };
