@@ -108,7 +108,7 @@ export const Navbar = () => {
               <a href="#clients">Clientes</a>
             </li>
             <li>
-              <a href="contact">Contacto</a>
+              <a href="#contact">Contacto</a>
             </li>
           </ul>
 

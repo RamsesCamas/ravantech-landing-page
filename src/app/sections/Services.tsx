@@ -43,7 +43,7 @@ export const Services = () => {
   const current = useMemo(() => SERVICES[index], [index]);
 
   return (
-    <section id="services" className="bg-white px-[10%] md:px-[45px] xl:px-[83px] 2xl:px-[203px] py-[40px] xl:py-[55px] scroll-mt-[55px]">
+    <section id="services" className="bg-white px-[10%] min-[500px]:px-[20%] md:px-[45px] xl:px-[83px] 2xl:px-[203px] py-[40px] xl:py-[55px] scroll-mt-[55px]">
       <h2 className="font-sora font-extrabold text-[20px] md:text-[24px] xl:text-[30px] text-center mb-[20px] md:mb-[35px] xl:mb-[50px]">
         Nuestros&nbsp;
         <p className="text-secondary-purple inline">

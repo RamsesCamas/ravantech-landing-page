@@ -16,11 +16,11 @@ export default function TeamCard({ member }: Props) {
       type="button"
       aria-label={`Ver detalles de ${member.name}`}
       onClick={() => setFlipped((f) => !f)}
-      className="w-full focus:outline-none group"
+      className="focus:outline-none group"
     >
       <div
         className={clsx(
-          "relative h-[360px] md:h-[400px] lg:h-[420px] w-full",
+          "relative h-[267px] w-[205px] xl:h-[325px] xl:w-[250px]",
           "perspective",
         )}
       >
@@ -38,7 +38,7 @@ export default function TeamCard({ member }: Props) {
             className="absolute inset-0 rounded-xl overflow-hidden bg-white border border-gray-border"
             style={{ backfaceVisibility: "hidden" }}
           >
-            <div className="relative h-[82.5%] w-full">
+            <div className="relative h-[217px] xl:h-[265px] w-full">
               <Image
                 src={member.imageSrc}
                 alt={member.imageAlt ?? member.name}
@@ -48,9 +48,9 @@ export default function TeamCard({ member }: Props) {
                 priority={false}
               />
             </div>
-            <div className="h-[17.5%] w-full py-[10px] px-[20px] flex flex-col items-center justify-center font-nunito">
-              <h3 className="font-extrabold text-main-purple text-[16px] md:text-[16px]">{member.name}</h3>
-              <p className="font-bold text-secondary-purple text-[14px] md:text-[13px] line-clamp-1">{member.role}</p>
+            <div className="h-[50px] xl:h-[60px] w-full px-[20px] flex flex-col items-center justify-center font-nunito">
+              <h3 className="font-semibold text-main-purple text-[14px] lg:text-[16px]">{member.name}</h3>
+              <p className="font-medium text-secondary-purple text-[11px] xl:text-[13px] line-clamp-1">{member.role}</p>
             </div>
           </div>
 
@@ -63,10 +63,10 @@ export default function TeamCard({ member }: Props) {
             }}
           >
             <div className="mb-[15px]">
-              <h3 className="font-extrabold text-[18px] xl:text-[20px]">{member.name}</h3>
-              <p className="font-medium text-[16px] xl:text-[18px]">{member.role}</p>
+              <h3 className="font-extrabold text-[16px] xl:text-[18px]">{member.name}</h3>
+              <p className="font-medium text-[14px] xl:text-[16px]">{member.role}</p>
             </div>
-            <p className="font-light text-[14px] xl:text-[16px] flex-1">
+            <p className="font-light text-[12px] xl:text-[14px] flex-1">
               {member.bio}
             </p>
             <div className="mt-4 flex items-center gap-x-[15px] xl:gap-x-[20px]">
@@ -83,9 +83,9 @@ export default function TeamCard({ member }: Props) {
                   <Image
                     src={s.iconSrc}
                     alt={s.alt ?? s.platform}
-                    width={24}
-                    height={24}
-                    className="xl:w-auto xl:h-[30px]"
+                    width={20}
+                    height={20}
+                    className="xl:w-auto xl:h-[25px]"
                   />
                 </a>
               ))}

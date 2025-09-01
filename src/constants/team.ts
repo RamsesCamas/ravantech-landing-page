@@ -22,7 +22,7 @@ export const TEAM: Member[] = [
     role: "Directora de Transformación Digital",
     imageSrc: "/images/team/ana.jpg",
     imageAlt: "Foto de Viviana Rojo",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula elit, ultricies in ullamcorper at, consequat vel neque.",
+    bio: "Lidero la adopción de soluciones tecnológicas que modernizan procesos y generan ventajas competitivas.",
     socials: [
       { platform: "linkedin", url: "https://www.linkedin.com/", iconSrc: "/icons/linkedin.svg" },
       { platform: "github", url: "https://github.com/", iconSrc: "/icons/github.svg" }
@@ -46,7 +46,7 @@ export const TEAM: Member[] = [
     role: "Coordinador de Desarrollo Tecnológico",
     imageSrc: "/images/team/ana.jpg",
     imageAlt: "Foto de Daniel Ríos",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula elit, ultricies in ullamcorper at, consequat vel neque.",
+    bio: "Superviso y organizo los proyectos técnicos, asegurando calidad e integración en cada solución.",
     socials: [
       { platform: "linkedin", url: "https://www.linkedin.com/", iconSrc: "/icons/linkedin.svg" },
       { platform: "github", url: "https://github.com/", iconSrc: "/icons/github.svg" }
@@ -68,9 +68,9 @@ export const TEAM: Member[] = [
     id: "5",
     name: "Luis Hernández",
     role: "Coordinador de Experiencia Digital",
-    imageSrc: "/images/team/ana.jpg",
+    imageSrc: "/images/team/luis.webp",
     imageAlt: "Foto de Luis Hernández",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula elit, ultricies in ullamcorper at, consequat vel neque.",
+    bio: "Ingeniero en Desarrollo de Software. Me especializo en el desarrollo de aplicaciones web atractivas y funcionales.",
     socials: [
       { platform: "linkedin", url: "https://www.linkedin.com/in/luishernandez19/", iconSrc: "/icons/linkedin.svg" },
       { platform: "github", url: "https://github.com/LuisHernandez019", iconSrc: "/icons/github.svg" },
@@ -83,7 +83,7 @@ export const TEAM: Member[] = [
     role: "Becario Desarrollo",
     imageSrc: "/images/team/ana.jpg",
     imageAlt: "Foto de Alejandro Camas",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula elit, ultricies in ullamcorper at, consequat vel neque.",
+    bio: "Apoyo en proyectos de software e innovación, aprendiendo y aplicando tecnologías de vanguardia.",
     socials: [
       { platform: "linkedin", url: "https://www.linkedin.com/", iconSrc: "/icons/linkedin.svg" },
       { platform: "github", url: "https://github.com/", iconSrc: "/icons/github.svg" }
@@ -95,7 +95,7 @@ export const TEAM: Member[] = [
     role: "Director de Relaciones Comerciales",
     imageSrc: "/images/team/ana.jpg",
     imageAlt: "Foto de Fernando Monterrosa",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula elit, ultricies in ullamcorper at, consequat vel neque.",
+    bio: "Construyo alianzas estratégicas y expando la red de clientes para impulsar el crecimiento empresarial.",
     socials: [
       { platform: "linkedin", url: "https://www.linkedin.com/in/fernando-monterrosa-mazariegos-516007293/", iconSrc: "/icons/linkedin.svg" }
     ],
