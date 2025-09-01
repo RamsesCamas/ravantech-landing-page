@@ -1,16 +1,35 @@
 "use client"
-import { useState } from "react";
+import { useState, useEffect  } from "react";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const handleToggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) setScrolled(true);
+      else setScrolled(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+  document.documentElement.style.overflow = menuOpen ? 'hidden' : '';
+}, [menuOpen]);
+
   return (
     <>
-      <nav className="bg-alt-white h-[70px] xl:h-[85px] flex justify-between items-center px-[30px] md:px-[40px] xl:px-[100px] 2xl:px-[200px]">
+      <nav
+        className={`fixed top-0 left-0 w-full z-50 bg-white h-[70px] xl:h-[85px] flex justify-between items-center px-[30px] md:px-[40px] min-[950px]:px-[100px] 2xl:px-[200px] transition-all duration-300 ${
+          scrolled ? "border-b border-gray-200 shadow-sm" : ""
+        }`}
+      >
         <img
           src="/icons/ravantech.svg"
           alt="RavanTech logo"
@@ -19,7 +38,7 @@ export const Navbar = () => {
           className="xl:w-auto xl:h-[50px]"
         />
 
-        <ul className="hidden md:flex md:items-center md:gap-x-4 lg:gap-x-7 md:font-sora md:font-semibold md:text-[15.5px] xl:text-[17px]">
+        <ul className="hidden md:flex md:items-center md:gap-x-4 min-[950px]:gap-x-7 md:font-sora md:font-semibold md:text-[15px] xl:text-[17px]">
           <li className="hover:text-secondary-purple">
             <a href="#about-us">Sobre nosotros</a>
           </li>
@@ -30,7 +49,7 @@ export const Navbar = () => {
             <a href="#clients">Clientes</a>
           </li>
           <li className="hover:text-secondary-purple">
-            <a href="contact">Contacto</a>
+            <a href="#contact">Contacto</a>
           </li>
           <li className="flex gap-x-4">
             <a href="#" target="_blank" rel="noopener noreferrer">
@@ -65,7 +84,7 @@ export const Navbar = () => {
       </nav>
 
       {menuOpen && (
-        <div className="bg-main-purple w-full h-screen fixed top-0 left-0 flex flex-col justify-center items-center text-center">
+        <div className="bg-main-purple w-full z-100 h-screen fixed top-0 left-0 flex flex-col justify-center items-center text-center">
           <button
             className="cursor-pointer absolute top-[40px] right-[40px]"
             onClick={handleToggleMenu}

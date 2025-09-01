@@ -25,7 +25,7 @@ export const TEAM: Member[] = [
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula elit, ultricies in ullamcorper at, consequat vel neque.",
     socials: [
       { platform: "linkedin", url: "https://www.linkedin.com/", iconSrc: "/icons/linkedin.svg" },
-      { platform: "github", url: "https://github.com/", iconSrc: "/icons/github.svg" },
+      { platform: "github", url: "https://github.com/", iconSrc: "/icons/github.svg" }
     ],
   },
   {
@@ -37,7 +37,7 @@ export const TEAM: Member[] = [
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula elit, ultricies in ullamcorper at, consequat vel neque.",
     socials: [
       { platform: "linkedin", url: "https://www.linkedin.com/", iconSrc: "/icons/linkedin.svg" },
-      { platform: "github", url: "https://github.com/", iconSrc: "/icons/github.svg" },
+      { platform: "github", url: "https://github.com/", iconSrc: "/icons/github.svg" }
     ],
   },
   {
@@ -49,7 +49,7 @@ export const TEAM: Member[] = [
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula elit, ultricies in ullamcorper at, consequat vel neque.",
     socials: [
       { platform: "linkedin", url: "https://www.linkedin.com/", iconSrc: "/icons/linkedin.svg" },
-      { platform: "github", url: "https://github.com/", iconSrc: "/icons/github.svg" },
+      { platform: "github", url: "https://github.com/", iconSrc: "/icons/github.svg" }
     ],
   },
   {
@@ -61,7 +61,7 @@ export const TEAM: Member[] = [
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula elit, ultricies in ullamcorper at, consequat vel neque.",
     socials: [
       { platform: "linkedin", url: "https://www.linkedin.com/", iconSrc: "/icons/linkedin.svg" },
-      { platform: "github", url: "https://github.com/", iconSrc: "/icons/github.svg" },
+      { platform: "github", url: "https://github.com/", iconSrc: "/icons/github.svg" }
     ],
   },
   {
@@ -72,20 +72,32 @@ export const TEAM: Member[] = [
     imageAlt: "Foto de Luis Hernández",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula elit, ultricies in ullamcorper at, consequat vel neque.",
     socials: [
-      { platform: "linkedin", url: "https://www.linkedin.com/", iconSrc: "/icons/linkedin.svg" },
-      { platform: "github", url: "https://github.com/", iconSrc: "/icons/github.svg" },
+      { platform: "linkedin", url: "https://www.linkedin.com/in/luishernandez19/", iconSrc: "/icons/linkedin.svg" },
+      { platform: "github", url: "https://github.com/LuisHernandez019", iconSrc: "/icons/github.svg" },
+      { platform: "website", url: "https://www.luishernandez.digital/", iconSrc: "/icons/website.svg" }
     ],
   },
   {
     id: "6",
     name: "Alejandro Camas",
-    role: "Consultor de Tecnología",
+    role: "Becario Desarrollo",
     imageSrc: "/images/team/ana.jpg",
     imageAlt: "Foto de Alejandro Camas",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula elit, ultricies in ullamcorper at, consequat vel neque.",
     socials: [
       { platform: "linkedin", url: "https://www.linkedin.com/", iconSrc: "/icons/linkedin.svg" },
-      { platform: "github", url: "https://github.com/", iconSrc: "/icons/github.svg" },
+      { platform: "github", url: "https://github.com/", iconSrc: "/icons/github.svg" }
+    ],
+  },
+  {
+    id: "7",
+    name: "Fernando Monterrosa",
+    role: "Director de Relaciones Comerciales",
+    imageSrc: "/images/team/ana.jpg",
+    imageAlt: "Foto de Fernando Monterrosa",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula elit, ultricies in ullamcorper at, consequat vel neque.",
+    socials: [
+      { platform: "linkedin", url: "https://www.linkedin.com/in/fernando-monterrosa-mazariegos-516007293/", iconSrc: "/icons/linkedin.svg" }
     ],
   },
 ];

@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer className="bg-main-purple font-nunito-sans text-white px-[21px] pt-[35px] pb-[30px] xl:pt-[50px]">
+    <footer className="bg-main-purple font-nunito text-white px-[21px] pt-[35px] pb-[30px] xl:pt-[50px]">
       <div className="flex flex-row justify-center gap-[50px] xl:gap-[150px] mb-[35px]">
         <div className="w-[20%]">
           <img
@@ -10,7 +10,7 @@ export const Footer = () => {
             height={35}
             className="xl:w-auto xl:h-[50px] mb-[20px]"
           />
-          <p className="font-light text-[11px] xl:text-[14px]">
+          <p className="font-regular text-[11px] xl:text-[14px]">
             Permitanos ser su socio de confianza en el camino hacia un futuro exitoso.
           </p>
         </div>

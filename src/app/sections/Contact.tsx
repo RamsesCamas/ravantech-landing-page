@@ -56,13 +56,13 @@ export const Contact = () => {
   }
 
   return (
-    <section id="contacto" className="bg-white px-[12.5%] md:px-[45px] xl:px-[83px] 2xl:px-[203px] py-[40px] xl:py-[55px]">
-      <div className="mx-auto max-w-2xl">
+    <section id="contact" className="bg-white px-[10%] md:px-[45px] xl:px-[83px] 2xl:px-[203px] py-[40px] xl:pt-[55px] xl:pb-[75px] scroll-mt-[65px]">
+      <div className="mx-auto max-w-[550px]">
         <div className="text-center mb-[25px] md:mb-[35px] xl:mb-[45px]">
-          <h2 className="font-sora font-extrabold text-[22px] md:text-[24px] xl:text-[32px] text-center mb-[20px]">
+          <h2 className="font-sora font-extrabold text-[20px] md:text-[24px] xl:text-[30px] text-center mb-[20px]">
             Contacto
           </h2>
-          <h3 className="font-nunito-sans font-medium text-secondary-purple text-[16px] md:text-[18px] xl:text-[22px] text-center">
+          <h3 className="font-nunito font-medium text-secondary-purple text-[16px] md:text-[18px] xl:text-[22px] text-center">
             ¿Tienes un proyecto en mente?&nbsp;
             <p className="inline text-night">
               Escríbenos y hablemos de innovación.
@@ -78,7 +78,7 @@ export const Contact = () => {
           </div>
 
           <div className="grid gap-2">
-            <label htmlFor="name" className="font-nunito-sans font-bold text-[14px]">
+            <label htmlFor="name" className="font-nunito font-bold text-[14px] xl:text-[18px]">
               Nombre
             </label>
             <input
@@ -92,7 +92,7 @@ export const Contact = () => {
           </div>
 
           <div className="grid gap-2">
-            <label htmlFor="email" className="font-nunito-sans font-bold text-[14px]">
+            <label htmlFor="email" className="font-nunito font-bold text-[14px] xl:text-[18px]">
               Correo
             </label>
             <input
@@ -108,7 +108,7 @@ export const Contact = () => {
           </div>
 
           <div className="grid gap-2">
-            <label htmlFor="message" className="font-nunito-sans font-bold text-[14px]">
+            <label htmlFor="message" className="font-nunito font-bold text-[14px] xl:text-[18px]">
               Mensaje
             </label>
             <textarea
@@ -125,7 +125,7 @@ export const Contact = () => {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="inline-flex items-center justify-center rounded-xl cursor-pointer bg-secondary-purple px-5 py-2.5 font-sora font-bold text-[15px] text-white transition hover:brightness-97 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-blue-500/30 disabled:opacity-50"
+              className="inline-flex items-center justify-center rounded-xl cursor-pointer bg-secondary-purple px-[25px] py-[15px] font-sora font-bold text-[12px] xl:text-[15px] text-white transition hover:brightness-97 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-blue-500/30 disabled:opacity-50"
             >
               {status === "loading" ? (
                 <span className="inline-flex items-center gap-2">
@@ -143,7 +143,11 @@ export const Contact = () => {
         </form>
       </div>
 
-      <ToastContainer />
+      <ToastContainer
+        toastClassName={() =>
+          "relative flex items-center p-6 mb-4 font-nunito text-[#757575] bg-white rounded-lg border border-gray-border"
+        }
+      />
     </section>
   );
 };

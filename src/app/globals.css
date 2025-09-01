@@ -21,7 +21,7 @@
   --color-gray-border: var(--timberwolf);
 
   --font-sora: Sora, sans-serif;
-  --font-nunito-sans: Nunito_Sans, sans-serif;
+  --font-nunito: Nunito, sans-serif;
 }
 
 @keyframes slider-scroll {
@@ -32,5 +32,5 @@
 body {
   background: var(--magnolia);
   color: var(--night);
-  font-family: var(--font-nunito-sans);
+  font-family: var(--font-nunito);
 }

@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export const About = () => {
   return (
-    <section className="px-[10%] md:px-[70px] xl:px-[163px] 2xl:px-[300px] my-[40px] xl:my-[50px]">
-      <h2 className="font-sora font-extrabold text-[22px] md:text-[24px] xl:text-[32px] text-center mb-[20px] md:mb-[35px] xl:mb-[50px]">
+    <section id="about-us" className="px-[10%] md:px-[70px] xl:px-[163px] 2xl:px-[22.5%] my-[40px] xl:my-[50px] scroll-mt-[105px]">
+      <h2 className="font-sora font-extrabold text-[20px] md:text-[24px] xl:text-[30px] text-center mb-[20px] md:mb-[35px] xl:mb-[50px]">
         Sobre&nbsp;
         <p className="text-secondary-purple inline">
           Nosotros
@@ -25,7 +25,7 @@ export const About = () => {
           />
         </div>
 
-        <div className="font-nunito-sans font-regular text-[16px] xl:text-[22px] text-center md:text-left md:w-[50%] md:ml-[30px] xl:ml-[75px]">
+        <div className="font-nunito font-regular text-[14px] min-[425px]:text-[16px] xl:text-[20px] text-center md:text-left md:w-[50%] md:ml-[30px] xl:ml-[75px]">
           <p className="mb-[15px] md:mb-[20px] xl:mb-[35px]">
             Somos una empresa de tecnologías creativas que fusiona IA y animación 3D para convertir ideas en sistemas inteligentes.
           </p>
@@ -37,18 +37,18 @@ export const About = () => {
 
       <div className="flex flex-col md:flex-row text-center mt-[25px] md:mt-[30px] xl:mt-[50px]">
         <div className="md:w-[50%]">
-          <h3 className="font-sora font-extrabold text-[18px] xl:text-[24px] mb-[10px] xl:mb-[15px]">
+          <h3 className="font-sora font-extrabold text-[16px] min-[425px]:text-[18px] xl:text-[22px] mb-[10px] xl:mb-[15px]">
             Misión
           </h3>
-          <p className="font-nunito-sans font-regular text-[16px] xl:text-[22px]">
+          <p className="font-nunito font-regular text-[14px] min-[425px]:text-[16px] xl:text-[20px]">
             Acelerar la transformación digital mediante soluciones inteligentes, visuales y centradas en el usuario.
           </p>
         </div>
         <div className="md:w-[50%] md:ml-[30px] xl:ml-[75px]">
-          <h3 className="font-sora font-extrabold text-[18px] xl:text-[24px] mb-[10px] xl:mb-[15px] mt-[20px] md:mt-[0]">
+          <h3 className="font-sora font-extrabold text-[16px] min-[425px]:text-[18px] xl:text-[22px] mb-[10px] xl:mb-[15px] mt-[20px] md:mt-[0]">
             Visión
           </h3>
-          <p className="font-nunito-sans font-regular text-[16px] xl:text-[22px]">
+          <p className="font-nunito font-regular text-[14px] min-[425px]:text-[16px] xl:text-[20px]">
             Ser líderes en Latinoamérica en el desarrollo de soluciones que integren IA, interacción humana y simulación avanzada.
           </p>
         </div>

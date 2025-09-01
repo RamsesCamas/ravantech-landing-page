@@ -43,8 +43,8 @@ export const Services = () => {
   const current = useMemo(() => SERVICES[index], [index]);
 
   return (
-    <section className="bg-white px-[10%] md:px-[45px] xl:px-[83px] 2xl:px-[203px] py-[40px] xl:py-[55px]">
-      <h2 className="font-sora font-extrabold text-[22px] md:text-[24px] xl:text-[32px] text-center mb-[20px] md:mb-[35px] xl:mb-[50px]">
+    <section id="services" className="bg-white px-[10%] md:px-[45px] xl:px-[83px] 2xl:px-[203px] py-[40px] xl:py-[55px] scroll-mt-[55px]">
+      <h2 className="font-sora font-extrabold text-[20px] md:text-[24px] xl:text-[30px] text-center mb-[20px] md:mb-[35px] xl:mb-[50px]">
         Nuestros&nbsp;
         <p className="text-secondary-purple inline">
           Servicios
@@ -52,7 +52,7 @@ export const Services = () => {
       </h2>
 
       {/* ===== Grid tablet/desktop ===== */}
-      <div className="mt-[25px] hidden md:grid grid-rows-3 md:grid-cols-2 gap-x-6 gap-y-14 lg:grid-rows-2 lg:grid-cols-3">
+      <div className="mt-[25px] hidden md:grid grid-rows-3 md:grid-cols-2 gap-x-6 gap-y-14 lg:grid-rows-2 lg:grid-cols-3 xl:px-[80px] 2xl:px-[200px]">
         {SERVICES.map((service) => (
           <figure key={service.id} className="relative flex flex-col items-center">
             <div className="absolute inset-x-0 -top-20 flex justify-center pointer-events-auto">
@@ -70,10 +70,10 @@ export const Services = () => {
 
             <article className="w-full h-full rounded-xl border bg-main-purple px-[25px] py-[25px] pt-20">
               <div className="flex flex-col text-white text-center">
-                <h3 className="font-sora font-bold text-[16px] xl:text-[18px] mt-[10px]">
+                <h3 className="font-sora font-bold text-[16px] xl:text-[20px] mt-[10px]">
                   {service.title}
                 </h3>
-                <p className="font-nunito-sans font-light text-[14px] xl:text-[16px] mt-2">
+                <p className="font-nunito font-regular text-[14px] xl:text-[16px] mt-[15px]">
                   {service.description}
                 </p>
               </div>
@@ -127,7 +127,7 @@ export const Services = () => {
                     <h3 className="font-sora font-bold text-[16px] my-[10px]">
                       {service.title}
                     </h3>
-                    <p className="font-nunito-sans font-light text-[14px]">
+                    <p className="font-nunito font-light text-[14px]">
                       {service.description}
                     </p>
                   </article>

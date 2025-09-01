@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import { Sora, Nunito_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const sora = Sora({
+const sora = localFont({
+  src: "./fonts/sora.woff2",
   variable: "--font-sora",
-  subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
-  display: "swap"
+  display: "swap",
+  preload: true,
 });
 
-const nunitoSans = Nunito_Sans({
-  variable: "--font-nunito-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
-  display: "swap"
-});
+const nunito = localFont({
+  src: "./fonts/nunito.woff2",
+  variable: "--font-nunito",
+  display: "swap",
+  preload: true,
+})
 
 export const metadata: Metadata = {
   title: "RavanTech - Soluciones Innovadoras en VR e IA",
@@ -27,10 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
-      <body
-        className={`${sora.variable} ${nunitoSans.variable} antialiased`}
-      >
+    <html lang="es" className="scroll-smooth">
+      <body className={`${sora.className} ${nunito.className}`}>
         {children}
       </body>
     </html>

@@ -48,28 +48,28 @@ export default function TeamCard({ member }: Props) {
                 priority={false}
               />
             </div>
-            <div className="h-[17.5%] w-full py-[10px] px-[20px] flex flex-col items-center justify-center font-nunito-sans">
-              <h3 className="font-bold text-main-purple text-[16px] md:text-[18px]">{member.name}</h3>
-              <p className="font-bold text-secondary-purple text-[14px] md:text-[16px] line-clamp-1">{member.role}</p>
+            <div className="h-[17.5%] w-full py-[10px] px-[20px] flex flex-col items-center justify-center font-nunito">
+              <h3 className="font-extrabold text-main-purple text-[16px] md:text-[16px]">{member.name}</h3>
+              <p className="font-bold text-secondary-purple text-[14px] md:text-[13px] line-clamp-1">{member.role}</p>
             </div>
           </div>
 
           {/* Reverso */}
           <div
-            className="absolute inset-0 rounded-xl overflow-hidden bg-main-purple text-white py-[20px] px-[25px] flex flex-col font-nunito-sans text-start"
+            className="absolute inset-0 rounded-xl overflow-hidden bg-main-purple text-white py-[20px] px-[25px] flex flex-col font-nunito text-start"
             style={{
               transform: "rotateY(180deg)",
               backfaceVisibility: "hidden",
             }}
           >
             <div className="mb-[15px]">
-              <h3 className="font-bold text-[18px]">{member.name}</h3>
-              <p className="font-regular text-[16px]">{member.role}</p>
+              <h3 className="font-extrabold text-[18px] xl:text-[20px]">{member.name}</h3>
+              <p className="font-medium text-[16px] xl:text-[18px]">{member.role}</p>
             </div>
-            <p className="text-[14px] flex-1">
+            <p className="font-light text-[14px] xl:text-[16px] flex-1">
               {member.bio}
             </p>
-            <div className="mt-4 flex items-center gap-x-[15px]">
+            <div className="mt-4 flex items-center gap-x-[15px] xl:gap-x-[20px]">
               {member.socials.map((s) => (
                 <a
                   key={s.platform}
@@ -85,6 +85,7 @@ export default function TeamCard({ member }: Props) {
                     alt={s.alt ?? s.platform}
                     width={24}
                     height={24}
+                    className="xl:w-auto xl:h-[30px]"
                   />
                 </a>
               ))}
