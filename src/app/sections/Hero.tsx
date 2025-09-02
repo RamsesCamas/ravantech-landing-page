@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Hero = () => {
   return (
-    <section className="bg-main-purple h-[calc(100vh+75px)] md:h-[calc(70vh)] xl:h-screen px-[10%] md:px-[60px] xl:px-[130px] 2xl:px-[250px] flex flex-col md:flex-row justify-center items-center text-center md:text-left md:gap-x-[35px] xl:gap-x-[70px]">
+    <section className="relative bg-main-purple h-[calc(100vh+75px)] md:h-[calc(75vh)] xl:h-screen px-[10%] md:px-[60px] xl:px-[130px] 2xl:px-[250px] flex flex-col md:flex-row justify-center items-center text-center md:text-left md:gap-x-[35px] xl:gap-x-[70px]">
       <div className="text-white md:w-[50%] lg:w-[47.5%] 2xl:w-[45%]">
         <div className="font-sora font-bold">
           <h1 className="text-[32px] min-[425px]:text-[40px] md:text-[32px] min-[1050px]:text-[50px] 2xl:text-[55px]">
@@ -36,6 +36,20 @@ export const Hero = () => {
           className="h-auto w-[400px] md:w-[310px] min-[850px]:w-[400px] xl:w-[450px] min-[1400px]:w-[537px] rounded-[20px] mt-[50px] md:mt-[0]"
         />
       </div>
+
+      <a
+        href="#about-us"
+        aria-label="Desplázate hacia abajo"
+        className="absolute md:hidden xl:block bottom-5 left-1/2 -translate-x-1/2"
+      >
+        <img
+          src="/icons/down-arrow.svg"
+          alt="Flecha hacia abajo"
+          width={40}
+          height={40}
+          className="xl:w-auto xl:h-[50px] motion-safe:animate-bounce"
+        />
+      </a>
     </section>
   );
 };

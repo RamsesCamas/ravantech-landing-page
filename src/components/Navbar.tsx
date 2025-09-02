@@ -52,19 +52,19 @@ export const Navbar = () => {
             <a href="#contact">Contacto</a>
           </li>
           <li className="flex gap-x-4">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/ravantech.xr/" target="_blank" rel="noopener noreferrer">
               <img
-                src="/icons/facebook-2.svg"
-                alt="Facebook icon"
+                src="/icons/instagram-2.svg"
+                alt="Instagram icon"
                 width={22}
                 height={22}
                 className="xl:w-auto xl:h-[25px]"
               />
             </a>
-            <a href="https://www.instagram.com/ravantech.xr/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/ravan-tech/" target="_blank" rel="noopener noreferrer">
               <img
-                src="/icons/instagram-2.svg"
-                alt="Instagram icon"
+                src="/icons/linkedin-2.svg"
+                alt="LinkedIn icon"
                 width={22}
                 height={22}
                 className="xl:w-auto xl:h-[25px]"
@@ -113,15 +113,7 @@ export const Navbar = () => {
           </ul>
 
           <div className="flex gap-x-[40px] absolute bottom-[50px]">
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <img
-                src="/icons/facebook.svg"
-                alt="Facebook icon"
-                width={30}
-                height={30}
-              />
-            </a>
-            <a href="https://www.instagram.com/ravantech.xr/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/ravantech.xr/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <img
                 src="/icons/instagram.svg"
                 alt="Instagram icon"
@@ -129,7 +121,7 @@ export const Navbar = () => {
                 height={30}
               />
             </a>
-            <a href="https://www.linkedin.com/company/ravan-tech/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/ravan-tech/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
               <img
                 src="/icons/linkedin.svg"
                 alt="LinkedIn icon"
