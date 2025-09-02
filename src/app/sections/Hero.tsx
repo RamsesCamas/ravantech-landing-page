@@ -7,9 +7,9 @@ export const Hero = () => {
         <div className="font-sora font-bold">
           <h1 className="text-[32px] min-[425px]:text-[40px] md:text-[32px] min-[1050px]:text-[50px] 2xl:text-[55px]">
             Bienvenidos a
-            <p className="text-secondary-purple">
+            <span className="text-secondary-purple block">
               RavanTech
-            </p>
+            </span>
           </h1>
         </div>
 

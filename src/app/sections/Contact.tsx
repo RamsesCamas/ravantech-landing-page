@@ -64,9 +64,9 @@ export const Contact = () => {
           </h2>
           <h3 className="font-nunito font-medium text-[#5B16FE] text-[16px] md:text-[18px] xl:text-[22px] text-center">
             ¿Tienes un proyecto en mente?&nbsp;
-            <p className="inline text-night">
+            <span className="inline text-night">
               Escríbenos y hablemos de innovación.
-            </p>
+            </span>
           </h3>
           
         </div>

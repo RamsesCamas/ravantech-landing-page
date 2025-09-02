@@ -5,9 +5,9 @@ export const About = () => {
     <section id="about-us" className="px-[10%] md:px-[70px] xl:px-[163px] 2xl:px-[22.5%] my-[40px] xl:my-[50px] scroll-mt-[105px]">
       <h2 className="font-sora font-extrabold text-[20px] md:text-[24px] xl:text-[30px] text-center mb-[20px] md:mb-[35px] xl:mb-[50px]">
         Sobre&nbsp;
-        <p className="text-secondary-purple inline">
+        <span className="text-secondary-purple inline">
           Nosotros
-        </p>
+        </span>
       </h2>
 
       <div className="flex flex-col-reverse md:flex-row justify-center items-center"> 

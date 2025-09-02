@@ -1,20 +1,13 @@
 "use client";
 import Image from "next/image";
-import { useState, useCallback, useMemo, useRef, useEffect  } from "react";
+import { useState, useCallback, useMemo } from "react";
 import BrowserOnly from "@/components/BrowserOnly";
 import ModelViewer from "@/components/ModelViewer";
 import { SERVICES } from "@/constants/services";
-import { useGLTF } from "@react-three/drei";
 
 export const Services = () => {
   const [index, setIndex] = useState(0);
   const total = SERVICES.length;
-
-  useEffect(() => {
-    try {
-      SERVICES.forEach(s => useGLTF.preload?.(s.model));
-    } catch { }
-  }, []);
 
   const goNext = useCallback(() => setIndex(i => (i + 1) % total), [total]);
   const goPrev = useCallback(() => setIndex(i => (i - 1 + total) % total), [total]);
@@ -25,9 +18,9 @@ export const Services = () => {
     <section id="services" className="bg-white px-[10%] min-[500px]:px-[20%] md:px-[45px] xl:px-[83px] 2xl:px-[203px] py-[40px] xl:py-[55px] scroll-mt-[55px]">
       <h2 className="font-sora font-extrabold text-[20px] md:text-[24px] xl:text-[30px] text-center mb-[20px] md:mb-[35px] xl:mb-[50px]">
         Nuestros&nbsp;
-        <p className="text-secondary-purple inline">
+        <span className="text-secondary-purple inline">
           Servicios
-        </p>
+        </span>
       </h2>
 
       {/* ===== Grid tablet/desktop ===== */}
@@ -94,7 +87,7 @@ export const Services = () => {
             {SERVICES.map((service) => (
               <div
                 key={service.id}
-                className="flex min-w-full pt-[25px] bg-transparent"
+                className="snap-start flex min-w-full pt-[25px] bg-transparent"
                 aria-roledescription="slide"
                 aria-label={`${SERVICES.indexOf(service) + 1} de ${total}: ${service.title}`}
               >

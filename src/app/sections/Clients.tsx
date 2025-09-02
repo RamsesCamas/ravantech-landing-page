@@ -6,9 +6,9 @@ export const Clients = () => {
     <section id="clients" className="py-[40px] xl:py-[55px] scroll-mt-[65px]">
       <h2 className="font-sora font-extrabold text-[20px] md:text-[24px] xl:text-[30px] text-center mb-[30px] md:mb-[35px] xl:mb-[50px]">
         Nuestros&nbsp;
-        <p className="text-secondary-purple inline">
+        <span className="text-secondary-purple inline">
           Clientes
-        </p>
+        </span>
       </h2>
 
       <InfiniteSlider
