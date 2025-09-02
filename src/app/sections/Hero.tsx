@@ -42,7 +42,7 @@ export const Hero = () => {
         aria-label="Desplázate hacia abajo"
         className="absolute md:hidden xl:block bottom-5 left-1/2 -translate-x-1/2"
       >
-        <img
+        <Image
           src="/icons/down-arrow.svg"
           alt="Flecha hacia abajo"
           width={40}

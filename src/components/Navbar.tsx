@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image";
 import { useState, useEffect  } from "react";
 
 export const Navbar = () => {
@@ -30,7 +31,7 @@ export const Navbar = () => {
           scrolled ? "border-b border-gray-200 shadow-sm" : ""
         }`}
       >
-        <img
+        <Image
           src="/icons/ravantech.svg"
           alt="RavanTech logo"
           width={132.3}
@@ -53,7 +54,7 @@ export const Navbar = () => {
           </li>
           <li className="flex gap-x-4">
             <a href="https://www.instagram.com/ravantech.xr/" target="_blank" rel="noopener noreferrer">
-              <img
+              <Image
                 src="/icons/instagram-2.svg"
                 alt="Instagram icon"
                 width={22}
@@ -62,7 +63,7 @@ export const Navbar = () => {
               />
             </a>
             <a href="https://www.linkedin.com/company/ravan-tech/" target="_blank" rel="noopener noreferrer">
-              <img
+              <Image
                 src="/icons/linkedin-2.svg"
                 alt="LinkedIn icon"
                 width={22}
@@ -74,7 +75,7 @@ export const Navbar = () => {
         </ul>
   
         <button className="cursor-pointer md:hidden" onClick={handleToggleMenu}>
-          <img
+          <Image
             src="/icons/menu.svg"
             alt="Menu icon"
             width={25}
@@ -89,7 +90,7 @@ export const Navbar = () => {
             className="cursor-pointer absolute top-[40px] right-[40px]"
             onClick={handleToggleMenu}
           >
-            <img
+            <Image
               src="/icons/close-menu.svg"
               alt="Close menu icon"
               width={35}
@@ -114,7 +115,7 @@ export const Navbar = () => {
 
           <div className="flex gap-x-[40px] absolute bottom-[50px]">
             <a href="https://www.instagram.com/ravantech.xr/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-              <img
+              <Image
                 src="/icons/instagram.svg"
                 alt="Instagram icon"
                 width={30}
@@ -122,7 +123,7 @@ export const Navbar = () => {
               />
             </a>
             <a href="https://www.linkedin.com/company/ravan-tech/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-              <img
+              <Image
                 src="/icons/linkedin.svg"
                 alt="LinkedIn icon"
                 width={30}

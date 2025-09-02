@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const Footer = () => {
   return (
     <footer className="bg-main-purple font-nunito text-white px-[21px] min-[450px]:px-[12.5%] pt-[35px] pb-[30px] xl:pt-[50px]">
@@ -7,7 +9,7 @@ export const Footer = () => {
         mb-[35px]
       ">
         <div className="col-span-1 md:col-span-1 md:w-[20%]">
-          <img
+          <Image
             src="/icons/ravantech-white.svg"
             alt="RavanTech logo"
             width={132.3}
@@ -40,7 +42,7 @@ export const Footer = () => {
 
           <div className="flex justify-center md:justify-start gap-x-[30px] pt-[20px] xl:pt-[30px]">
             <a href="https://www.instagram.com/ravantech.xr/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-              <img
+              <Image
                 src="/icons/instagram.svg"
                 alt="Instagram icon"
                 width={20}
@@ -49,7 +51,7 @@ export const Footer = () => {
               />
             </a>
             <a href="https://www.linkedin.com/company/ravan-tech/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-              <img
+              <Image
                 src="/icons/linkedin.svg"
                 alt="LinkedIn icon"
                 width={20}

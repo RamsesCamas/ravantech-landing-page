@@ -47,12 +47,6 @@ function FittedModel({
     return { size: s, center: c };
   }, [scene]);
 
-  // Necesitamos cámara para derivar el alto visible en unidades de mundo
-  const camRef = useRef<PerspectiveCamera | null>(null);
-  useLayoutEffect(() => {
-    // se inyecta desde arriba (onCreated / scene), pero podemos tomarla del global si hace falta
-  }, []);
-
   // Efecto de layout: escalar y posicionar
   useLayoutEffect(() => {
     if (!posGroup.current || !scaleGroup.current) return;
