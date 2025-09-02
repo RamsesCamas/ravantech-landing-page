@@ -17,6 +17,8 @@ export const About = () => {
             alt="Imagen de portada"
             width={400}
             height={285}
+            loading="lazy"
+            decoding="async"
             sizes="(max-width: 699px) 375px,
                 (max-width: 1199px) 350px,
                 (max-width: 1399px) 400px,

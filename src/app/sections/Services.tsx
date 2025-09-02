@@ -19,27 +19,6 @@ export const Services = () => {
   const goNext = useCallback(() => setIndex(i => (i + 1) % total), [total]);
   const goPrev = useCallback(() => setIndex(i => (i - 1 + total) % total), [total]);
 
-  const touchStartX = useRef<number | null>(null);
-  const touchDeltaX = useRef(0);
-  const THRESHOLD = 50;
-
-  const onTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
-    touchDeltaX.current = 0;
-  };
-  const onTouchMove = (e: React.TouchEvent) => {
-    if (touchStartX.current == null) return;
-    touchDeltaX.current = e.touches[0].clientX - touchStartX.current;
-  };
-  const onTouchEnd = () => {
-    if (Math.abs(touchDeltaX.current) > THRESHOLD) {
-      if (touchDeltaX.current < 0) goNext();
-      else goPrev();
-    }
-    touchStartX.current = null;
-    touchDeltaX.current = 0;
-  };
-
   const current = useMemo(() => SERVICES[index], [index]);
 
   return (
@@ -91,10 +70,7 @@ export const Services = () => {
       >
         {/* Viewport */}
         <div
-          className="relative overflow-hidden rounded-xl"
-          onTouchStart={onTouchStart}
-          onTouchMove={onTouchMove}
-          onTouchEnd={onTouchEnd}
+          className="relative overflow-x-hidden overflow-y-visible rounded-xl snap-x snap-mandatory scroll-pl-4"
         >
           <div className="absolute inset-x-0 -top-7 z-10 flex justify-center pointer-events-auto">
             <BrowserOnly>
@@ -144,6 +120,8 @@ export const Services = () => {
             alt="Icono de flecha hacia la izquierda"
             width={45}
             height={45}
+            loading="lazy"
+            decoding="async"
             className="cursor-pointer hover:brightness-97"
             onClick={goPrev}
           />
@@ -157,6 +135,8 @@ export const Services = () => {
             alt="Icono de flecha hacia la derecha"
             width={45}
             height={45}
+            loading="lazy"
+            decoding="async"
             className="cursor-pointer hover:brightness-97"
             onClick={goNext}
           />

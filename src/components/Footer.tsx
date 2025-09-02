@@ -14,6 +14,8 @@ export const Footer = () => {
             alt="RavanTech logo"
             width={132.3}
             height={35}
+            loading="lazy"
+            decoding="async"
             className="xl:w-auto xl:h-[50px] mb-[20px]"
           />
           <p className="font-regular text-[12px] xl:text-[14px]">
@@ -47,6 +49,8 @@ export const Footer = () => {
                 alt="Instagram icon"
                 width={20}
                 height={20}
+                loading="lazy"
+                decoding="async"
                 className="xl:w-auto xl:h-[30px]"
               />
             </a>
@@ -56,6 +60,8 @@ export const Footer = () => {
                 alt="LinkedIn icon"
                 width={20}
                 height={20}
+                loading="lazy"
+                decoding="async"
                 className="xl:w-auto xl:h-[30px]"
               />
             </a>

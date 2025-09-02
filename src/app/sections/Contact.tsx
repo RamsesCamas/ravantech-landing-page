@@ -62,7 +62,7 @@ export const Contact = () => {
           <h2 className="font-sora font-extrabold text-[20px] md:text-[24px] xl:text-[30px] text-center mb-[20px]">
             Contacto
           </h2>
-          <h3 className="font-nunito font-medium text-secondary-purple text-[16px] md:text-[18px] xl:text-[22px] text-center">
+          <h3 className="font-nunito font-medium text-[#5B16FE] text-[16px] md:text-[18px] xl:text-[22px] text-center">
             ¿Tienes un proyecto en mente?&nbsp;
             <p className="inline text-night">
               Escríbenos y hablemos de innovación.
@@ -125,7 +125,7 @@ export const Contact = () => {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="inline-flex items-center justify-center rounded-xl cursor-pointer bg-secondary-purple px-[25px] py-[15px] font-sora font-bold text-[12px] xl:text-[15px] text-white transition hover:brightness-97 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-blue-500/30 disabled:opacity-50"
+              className="inline-flex items-center justify-center rounded-xl cursor-pointer bg-[#6340B5] px-[25px] py-[15px] font-sora font-bold text-[12px] xl:text-[15px] text-white transition hover:brightness-97 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-blue-500/30 disabled:opacity-50"
             >
               {status === "loading" ? (
                 <span className="inline-flex items-center gap-2">

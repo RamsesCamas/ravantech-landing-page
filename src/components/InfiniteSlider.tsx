@@ -54,10 +54,11 @@ export default function InfiniteSlider({
               alt={img.alt ?? ""}
               width={320}
               height={100}
+              loading="lazy"
+              decoding="async"
               sizes="(max-width: 768px) 70vw, 40vw"
               className="h-[var(--h)] w-auto rounded-xl object-cover opacity-45"
               style={{ ["--h" as any]: `${heightPx}px` }}
-              priority={idx < 4}
               unoptimized={unoptimized}
             />
           </div>

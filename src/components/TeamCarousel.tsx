@@ -161,6 +161,8 @@ export default function TeamCarousel({ members, className, randomize = true }: P
             alt="Icono de flecha hacia la izquierda"
             width={45}
             height={45}
+            loading="lazy"
+            decoding="async"
             className="cursor-pointer hover:brightness-97"
             onClick={goPrev}
           />
@@ -169,6 +171,8 @@ export default function TeamCarousel({ members, className, randomize = true }: P
             alt="Icono de flecha hacia la derecha"
             width={45}
             height={45}
+            loading="lazy"
+            decoding="async"
             className="cursor-pointer hover:brightness-97"
             onClick={goNext}
           />

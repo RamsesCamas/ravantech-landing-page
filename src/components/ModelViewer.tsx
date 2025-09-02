@@ -114,16 +114,19 @@ export default function ModelViewer({
   orbit = true,
 }: Props) {
   const [targetY, setTargetY] = useState(0);
+  const [active, setActive] = useState(false);
 
   return (
     <div className={`relative overflow-hidden ${className}`} style={{ height }}>
       <Canvas
-        frameloop={autoRotate ? "always" : "demand"}
-        dpr={[1, 1.5]}
+        frameloop={active ? "always" : "demand"}
+        dpr={[1, 1]}
         camera={{ position: [2.2, 0, 2.2], fov: 45 }}
         gl={{ antialias: true, powerPreference: "high-performance", alpha: true }}
         style={{ background: "transparent" }}
         onCreated={(st) => st.gl.setClearAlpha(0)}
+        onPointerEnter={() => setActive(true)}
+        onPointerLeave={() => setActive(false)}
       >
         <ambientLight intensity={0.6} />
         <directionalLight position={[3, 3, 3]} intensity={1.8} />

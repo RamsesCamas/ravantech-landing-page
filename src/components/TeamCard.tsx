@@ -46,6 +46,8 @@ export default function TeamCard({ member }: Props) {
                 className="object-cover"
                 sizes="(max-width: 700px) 100vw, 33vw"
                 priority={false}
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="h-[50px] xl:h-[60px] w-full px-[20px] flex flex-col items-center justify-center font-nunito">
@@ -85,6 +87,8 @@ export default function TeamCard({ member }: Props) {
                     alt={s.alt ?? s.platform}
                     width={20}
                     height={20}
+                    loading="lazy"
+                    decoding="async"
                     className="xl:w-auto xl:h-[25px]"
                   />
                 </a>
