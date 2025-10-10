@@ -1,5 +1,25 @@
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "./sections/Hero";
+import { About } from "./sections/About";
+import { Services } from "./sections/Services";
+import { Clients } from "./sections/Clients";
+import { Alliances } from "./sections/Alliances";
+import { Team } from "./sections/Team";
+import { Contact } from "./sections/Contact";
+import { Footer } from "@/components/Footer";
+
 export default function Home() {
   return (
-    <h1>Hello World!</h1>
+    <div>
+      <Navbar/>
+      <Hero/>
+      <About/>
+      <Services/>
+      <Clients/>
+      <Alliances/>
+      <Team/>
+      <Contact/>
+      <Footer/>
+    </div>
   );
 };
