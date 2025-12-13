@@ -19,10 +19,10 @@ export const TEAM: Member[] = [
   {
     id: "1",
     name: "Viviana Rojo",
-    role: "Directora de Transformación Digital",
-    imageSrc: "/images/team/default-picture.webp",
+    role: "VP de Operaciones",
+    imageSrc: "/images/team/vivi.webp",
     imageAlt: "Foto de Viviana Rojo",
-    bio: "Lidero la adopción de soluciones tecnológicas que modernizan procesos y generan ventajas competitivas.",
+    bio: "Lidero la operación de proyectos tecnológicos, integrando gestión, diseño UX y control de calidad para garantizar entregas exitosas y clientes satisfechos.",
     socials: [
       { platform: "linkedin", url: "https://www.linkedin.com/", iconSrc: "/icons/linkedin.svg" },
       { platform: "github", url: "https://github.com/", iconSrc: "/icons/github.svg" }
@@ -31,10 +31,10 @@ export const TEAM: Member[] = [
   {
     id: "2",
     name: "Ramsés Camas",
-    role: "CTO",
-    imageSrc: "/images/team/default-picture.webp",
+    role: "CTO y Co-Fundador",
+    imageSrc: "/images/team/ram.webp",
     imageAlt: "Foto de Ramsés Camas",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula elit, ultricies in ullamcorper at, consequat vel neque.",
+    bio: "Mtro. en IA. Dirijo la estrategia tecnológica y el área de I+D, desarrollando soluciones de inteligencia artificial, automatización y experiencias inmersivas.",
     socials: [
       { platform: "linkedin", url: "https://www.linkedin.com/in/camas-ramses/", iconSrc: "/icons/linkedin.svg" },
       { platform: "twitter", url: "https://x.com/CamasRamses", iconSrc: "/icons/twitter.svg" }
@@ -43,10 +43,10 @@ export const TEAM: Member[] = [
   {
     id: "3",
     name: "Daniel Ríos",
-    role: "Coordinador de Desarrollo Tecnológico",
-    imageSrc: "/images/team/default-picture.webp",
+    role: "VP de Ingeniería",
+    imageSrc: "/images/team/victor_ia.webp",
     imageAlt: "Foto de Daniel Ríos",
-    bio: "Superviso y organizo los proyectos técnicos, asegurando calidad e integración en cada solución.",
+    bio: "Superviso la ejecución técnica de proyectos, desde arquitectura hasta despliegue. Especializado en desarrollo web FullStack e Infraestructura Cloud",
     socials: [
       { platform: "linkedin", url: "https://www.linkedin.com/", iconSrc: "/icons/linkedin.svg" },
       { platform: "github", url: "https://github.com/", iconSrc: "/icons/github.svg" }
@@ -55,10 +55,10 @@ export const TEAM: Member[] = [
   {
     id: "4",
     name: "Iván Rincón",
-    role: "CEO",
-    imageSrc: "/images/team/default-picture.webp",
+    role: "CEO y Co-Fundador",
+    imageSrc: "/images/team/ivan.webp",
     imageAlt: "Foto de Iván Rincón",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula elit, ultricies in ullamcorper at, consequat vel neque.",
+    bio: "Dirijo la visión estratégica de la empresa, integrando tecnología, creatividad y negocio para desarrollar soluciones innovadoras que generen valor real para nuestros clientes.",
     socials: [
       { platform: "linkedin", url: "https://www.linkedin.com/", iconSrc: "/icons/linkedin.svg" },
       { platform: "github", url: "https://github.com/", iconSrc: "/icons/github.svg" }
@@ -67,7 +67,7 @@ export const TEAM: Member[] = [
   {
     id: "5",
     name: "Luis Hernández",
-    role: "Coordinador de Experiencia Digital",
+    role: "Senior Frontend Engineer",
     imageSrc: "/images/team/luis.webp",
     imageAlt: "Foto de Luis Hernández",
     bio: "Ingeniero en Desarrollo de Software. Me especializo en el desarrollo de aplicaciones web atractivas y funcionales.",
@@ -80,8 +80,8 @@ export const TEAM: Member[] = [
   {
     id: "6",
     name: "Alejandro Camas",
-    role: "Becario Desarrollo",
-    imageSrc: "/images/team/default-picture.webp",
+    role: "Consultor de tecnología",
+    imageSrc: "/images/team/alex_ia.webp",
     imageAlt: "Foto de Alejandro Camas",
     bio: "Apoyo en proyectos de software e innovación, aprendiendo y aplicando tecnologías de vanguardia.",
     socials: [
@@ -93,7 +93,7 @@ export const TEAM: Member[] = [
     id: "7",
     name: "Fernando Monterrosa",
     role: "Director de Relaciones Comerciales",
-    imageSrc: "/images/team/default-picture.webp",
+    imageSrc: "/images/team/fercho.webp",
     imageAlt: "Foto de Fernando Monterrosa",
     bio: "Construyo alianzas estratégicas y expando la red de clientes para impulsar el crecimiento empresarial.",
     socials: [
