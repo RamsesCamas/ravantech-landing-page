@@ -58,7 +58,7 @@ export const TEAM: Member[] = [
     role: "COO y Co-Fundador",
     imageSrc: "/images/team/ivan.webp",
     imageAlt: "Foto de Iván Rincón",
-    bio: "Director de Operaciones que convierte visión en realidad. Dirijo las operaciones que llevan nuestra innovación al mundo y lidero la dirección creativa que da vida a nuestros proyectos de IA, VR/AR y videojuegos.",
+    bio: "Director de Operaciones que convierte visión en realidad. Estoy a cargo de llevar nuestra innovación al mundo real, liderando la dirección creativa que da vida a nuestros proyectos de IA, VR/AR y videojuegos.",
     socials: [
       { platform: "linkedin", url: "https://www.linkedin.com/", iconSrc: "/icons/linkedin.svg" },
       { platform: "github", url: "https://github.com/", iconSrc: "/icons/github.svg" }
