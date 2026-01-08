@@ -31,10 +31,10 @@ export const TEAM: Member[] = [
   {
     id: "2",
     name: "Ramsés Camas",
-    role: "CTO y Co-Fundador",
+    role: "CEO y Co-Fundador",
     imageSrc: "/images/team/ram.webp",
     imageAlt: "Foto de Ramsés Camas",
-    bio: "Mtro. en IA. Dirijo la estrategia tecnológica y el área de I+D, desarrollando soluciones de inteligencia artificial, automatización y experiencias inmersivas.",
+    bio: "Mtro. en IA y arquitecto de sistemas inteligentes. Lidero RavanTech desde el código hasta la estrategia, construyendo agentes autónomos y sistemas de automatización que transforman cómo las empresas operan.",
     socials: [
       { platform: "linkedin", url: "https://www.linkedin.com/in/camas-ramses/", iconSrc: "/icons/linkedin.svg" },
       { platform: "twitter", url: "https://x.com/CamasRamses", iconSrc: "/icons/twitter.svg" }
@@ -55,10 +55,10 @@ export const TEAM: Member[] = [
   {
     id: "4",
     name: "Iván Rincón",
-    role: "CEO y Co-Fundador",
+    role: "COO y Co-Fundador",
     imageSrc: "/images/team/ivan.webp",
     imageAlt: "Foto de Iván Rincón",
-    bio: "Dirijo la visión estratégica de la empresa, integrando tecnología, creatividad y negocio para desarrollar soluciones innovadoras que generen valor real para nuestros clientes.",
+    bio: "Director de Operaciones que convierte visión en realidad. Dirijo las operaciones que llevan nuestra innovación al mundo y lidero la dirección creativa que da vida a nuestros proyectos de IA, VR/AR y videojuegos.",
     socials: [
       { platform: "linkedin", url: "https://www.linkedin.com/", iconSrc: "/icons/linkedin.svg" },
       { platform: "github", url: "https://github.com/", iconSrc: "/icons/github.svg" }
