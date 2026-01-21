@@ -24,12 +24,6 @@ export const Footer = () => {
         </div>
 
         <div className="col-span-1 md:col-span-1 md:w-[27.5%] xl:w-[25%] text-[12px] xl:text-[14px]">
-          <div className="mb-[20px]">
-            <h4 className="font-bold">Dirección</h4>
-            <p className="font-light">
-              Calle 12A Pte. Nte. 16, El Magueyito, 29038 <br /> Tuxtla Gutiérrez, Chiapas
-            </p>
-          </div>
           <div>
             <h4 className="font-bold">Correo</h4>
             <p className="font-light">contact@ravantech.com.mx</p>
