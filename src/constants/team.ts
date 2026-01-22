@@ -44,7 +44,7 @@ export const TEAM: Member[] = [
     id: "3",
     name: "Daniel Ríos",
     role: "VP de Ingeniería",
-    imageSrc: "/images/team/victor_ia.webp",
+    imageSrc: "/images/team/victor.webp",
     imageAlt: "Foto de Daniel Ríos",
     bio: "Superviso la ejecución técnica de proyectos, desde arquitectura hasta despliegue. Especializado en desarrollo web FullStack e Infraestructura Cloud",
     socials: [

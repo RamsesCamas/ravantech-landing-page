@@ -64,7 +64,7 @@ export const Footer = () => {
       </div>
 
       <small className="block font-light text-[9px] xl:text-[11px] text-center">
-        © <time dateTime="2025">2025</time> RavanTech. Todos los derechos reservados
+        © <time dateTime="2026">2026</time> RavanTech. Todos los derechos reservados
       </small>
     </footer>
   );
