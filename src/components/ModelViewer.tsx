@@ -163,4 +163,3 @@ export default function ModelViewer({
   );
 };
 
-useGLTF.preload?.("/models/VR_Headset.glb");

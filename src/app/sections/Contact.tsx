@@ -63,7 +63,7 @@ export const Contact = () => {
   }
 
   return (
-    <section id="contact" className="bg-white px-[10%] md:px-[45px] xl:px-[83px] 2xl:px-[203px] py-[40px] xl:pt-[55px] xl:pb-[75px] scroll-mt-[65px]">
+    <section id="contact" className="cv-auto bg-white px-[10%] md:px-[45px] xl:px-[83px] 2xl:px-[203px] py-[40px] xl:pt-[55px] xl:pb-[75px] scroll-mt-[65px]">
       <div className="mx-auto max-w-[550px]">
         <div className="text-center mb-[25px] md:mb-[35px] xl:mb-[45px]">
           <h2 className="font-sora font-extrabold text-[20px] md:text-[24px] xl:text-[30px] text-center mb-[20px]">

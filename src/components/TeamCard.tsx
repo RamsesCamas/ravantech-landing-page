@@ -44,7 +44,7 @@ export default function TeamCard({ member }: Props) {
                 alt={member.imageAlt ?? member.name}
                 fill
                 className="object-cover"
-                sizes="(max-width: 700px) 100vw, 33vw"
+                sizes="(max-width: 699px) 205px, (max-width: 1199px) 250px, 250px"
                 priority={false}
                 loading="lazy"
                 decoding="async"

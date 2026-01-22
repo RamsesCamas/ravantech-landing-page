@@ -56,7 +56,7 @@ export default function InfiniteSlider({
               height={100}
               loading="lazy"
               decoding="async"
-              sizes="(max-width: 768px) 70vw, 40vw"
+              sizes="(max-width: 768px) 200px, 240px"
               className="h-[var(--h)] w-auto rounded-xl object-cover opacity-45"
               style={{ ["--h" as any]: `${heightPx}px` }}
               unoptimized={unoptimized}

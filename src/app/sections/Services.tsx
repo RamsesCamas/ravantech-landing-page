@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useCallback, useMemo } from "react";
-import BrowserOnly from "@/components/BrowserOnly";
-import ModelViewer from "@/components/ModelViewer";
+import LazyModelViewer from "@/components/LazyModelViewer";
 import { SERVICES } from "@/constants/services";
 
 export const Services = () => {
@@ -15,7 +14,7 @@ export const Services = () => {
   const current = useMemo(() => SERVICES[index], [index]);
 
   return (
-    <section id="services" className="bg-white px-[10%] min-[500px]:px-[20%] md:px-[45px] xl:px-[83px] 2xl:px-[203px] py-[40px] xl:py-[55px] scroll-mt-[55px]">
+    <section id="services" className="cv-auto bg-white px-[10%] min-[500px]:px-[20%] md:px-[45px] xl:px-[83px] 2xl:px-[203px] py-[40px] xl:py-[55px] scroll-mt-[55px]">
       <h2 className="font-sora font-extrabold text-[20px] md:text-[24px] xl:text-[30px] text-center mb-[20px] md:mb-[35px] xl:mb-[50px]">
         Nuestros&nbsp;
         <span className="text-secondary-purple inline">
@@ -28,16 +27,14 @@ export const Services = () => {
         {SERVICES.map((service) => (
           <figure key={service.id} className="relative flex flex-col items-center">
             <div className="absolute inset-x-0 -top-20 flex justify-center pointer-events-auto">
-              <BrowserOnly>
-                <ModelViewer
-                  src={service.model}
-                  height={170}
-                  fillY={0.5}
-                  align="center"
-                  autoRotate
-                  className="w-[220px] max-w-full"
-                />
-              </BrowserOnly>
+              <LazyModelViewer
+                src={service.model}
+                height={170}
+                fillY={0.5}
+                align="center"
+                autoRotate
+                className="w-[220px] max-w-full"
+              />
             </div>
 
             <article className="w-full h-full rounded-xl border bg-main-purple px-[25px] py-[25px] pt-20">
@@ -66,17 +63,15 @@ export const Services = () => {
           className="relative overflow-x-hidden overflow-y-visible rounded-xl snap-x snap-mandatory scroll-pl-4"
         >
           <div className="absolute inset-x-0 -top-7 z-10 flex justify-center pointer-events-auto">
-            <BrowserOnly>
-              <ModelViewer
-                src={current.model}
-                height={150}
-                fillY={0.5}
-                align="center"
-                autoRotate
-                orbit={true}
-                className="w-[190px] max-w-full"
-              />
-            </BrowserOnly>
+            <LazyModelViewer
+              src={current.model}
+              height={150}
+              fillY={0.5}
+              align="center"
+              autoRotate
+              orbit={true}
+              className="w-[190px] max-w-full"
+            />
           </div>
 
           {/* Track */}

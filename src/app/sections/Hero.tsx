@@ -28,6 +28,7 @@ export const Hero = () => {
           alt="Imagen de portada"
           width={537}
           height={358}
+          fetchPriority="high"
           priority
           sizes="(max-width: 699px) 400px,
               (max-width: 1199px) 310px,

@@ -28,6 +28,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
+      <head>
+        <meta
+          name="description"
+          content="Desarrollamos soluciones innovadoras con realidad virtual, mixta, aumentada, videojuegos e inteligencia artificial para transformar tu empresa."
+        />
+      </head>
       <body className={`${sora.className} ${nunito.className}`}>
         {children}
       </body>

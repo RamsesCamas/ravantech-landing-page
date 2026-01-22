@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Footer = () => {
   return (
-    <footer className="bg-main-purple font-nunito text-white px-[21px] min-[450px]:px-[12.5%] pt-[35px] pb-[30px] xl:pt-[50px]">
+    <footer className="cv-auto bg-main-purple font-nunito text-white px-[21px] min-[450px]:px-[12.5%] pt-[35px] pb-[30px] xl:pt-[50px]">
       <div className="
         grid grid-cols-2 gap-[20px]
         md:grid-cols-none md:flex md:flex-row md:flex-nowrap md:justify-evenly xl:justify-center md:gap-[50px] xl:gap-[150px]
