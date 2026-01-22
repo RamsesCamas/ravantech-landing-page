@@ -30,9 +30,13 @@ function shuffle<T>(arr: T[]) {
   return arr;
 }
 
+function normalizeName(value: string) {
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
 export default function TeamCarousel({ members, className, randomize = true }: Props) {
   const [visibleCount, setVisibleCount] = useState<1 | 3 | 4>(getVisibleCountSSR());
-  const [animate, setAnimate] = useState(true);
+  const [isTransitioning, setIsTransitioning] = useState(true);
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => { setMounted(true); }, []);
@@ -40,7 +44,19 @@ export default function TeamCarousel({ members, className, randomize = true }: P
   const ordered = useMemo(() => {
     if (!members?.length) return [];
     if (!mounted || !randomize) return members;
-    return shuffle([...members]);
+    const shuffled = shuffle([...members]);
+    const priority = ["ramses camas", "ivan rincon"];
+    const prioritized: Member[] = [];
+
+    for (const target of priority) {
+      const idx = shuffled.findIndex((m) => normalizeName(m.name) === target);
+      if (idx !== -1) {
+        prioritized.push(shuffled[idx]);
+        shuffled.splice(idx, 1);
+      }
+    }
+
+    return [...prioritized, ...shuffled];
   }, [members, randomize, mounted]);
   const total = ordered.length;
 
@@ -70,10 +86,8 @@ export default function TeamCarousel({ members, className, randomize = true }: P
 
   // cuando cambia visibleCount, re-ubicar sin animación y reactivar
   useEffect(() => {
-    setAnimate(false);
+    setIsTransitioning(false);
     setIndex(visibleCount);
-    const id = requestAnimationFrame(() => setAnimate(true));
-    return () => cancelAnimationFrame(id);
   }, [visibleCount, total]);
 
   // === Medición del ancho real de un ítem (card) ===
@@ -96,31 +110,32 @@ export default function TeamCarousel({ members, className, randomize = true }: P
     itemWidth > 0 ? visibleCount * stepPx - GAP_PX : undefined;
 
   const goNext = useCallback(() => {
-    setAnimate(true);
+    setIsTransitioning(true);
     setIndex((i) => i + 1);
   }, []);
   
   const goPrev = useCallback(() => {
-    setAnimate(true);
+    setIsTransitioning(true);
     setIndex((i) => i - 1);
   }, []);
 
   const handleTransitionEnd = useCallback(() => {
     const firstReal = visibleCount;
-    const lastReal = visibleCount + total - 1;
-    
-    if (index > lastReal) {
-      const overshoot = index - lastReal - 1;
-      setAnimate(false);
-      setIndex(firstReal + overshoot);
-      requestAnimationFrame(() => setAnimate(true));
+    if (index >= total + firstReal) {
+      setIsTransitioning(false);
+      setIndex(index - total);
     } else if (index < firstReal) {
-      const overshoot = firstReal - index - 1;
-      setAnimate(false);
-      setIndex(lastReal - overshoot);
-      requestAnimationFrame(() => setAnimate(true));
+      setIsTransitioning(false);
+      setIndex(index + total);
     }
   }, [index, total, visibleCount]);
+
+  useEffect(() => {
+    if (!isTransitioning) {
+      const id = requestAnimationFrame(() => setIsTransitioning(true));
+      return () => cancelAnimationFrame(id);
+    }
+  }, [isTransitioning]);
 
   if (!total) return null;
 
@@ -137,7 +152,7 @@ export default function TeamCarousel({ members, className, randomize = true }: P
           <div
             className={clsx(
               "flex items-start gap-[15px] will-change-transform",
-              animate ? "transition-transform duration-300 ease-out" : "transition-none"
+              isTransitioning ? "transition-transform duration-300 ease-out" : ""
             )}
             style={{ transform: `translateX(${offsetPx}px)` }}
             onTransitionEnd={handleTransitionEnd}

@@ -70,7 +70,7 @@ export const TEAM: Member[] = [
     role: "Senior Frontend Engineer",
     imageSrc: "/images/team/luis.webp",
     imageAlt: "Foto de Luis Hernández",
-    bio: "Ingeniero en Desarrollo de Software. Me especializo en el desarrollo de aplicaciones web atractivas y funcionales.",
+    bio: "Desarrollo interfaces modernas y escalables, poniendo énfasis en el rendimiento, la accesibilidad y una experiencia de usuario fluida y consistente.",
     socials: [
       { platform: "linkedin", url: "https://www.linkedin.com/in/luishernandez19/", iconSrc: "/icons/linkedin.svg" },
       { platform: "github", url: "https://github.com/LuisHernandez019", iconSrc: "/icons/github.svg" },
