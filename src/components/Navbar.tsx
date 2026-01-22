@@ -53,7 +53,7 @@ export const Navbar = () => {
             <a href="#contact">Contacto</a>
           </li>
           <li className="flex gap-x-4">
-            <a href="https://www.instagram.com/ravantech.xr/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/ravantech.ia/" target="_blank" rel="noopener noreferrer">
               <Image
                 src="/icons/instagram-2.svg"
                 alt="Instagram icon"

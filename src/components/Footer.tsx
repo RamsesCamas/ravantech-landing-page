@@ -37,7 +37,7 @@ export const Footer = () => {
           </div>
 
           <div className="flex justify-center md:justify-start gap-x-[30px] pt-[20px] xl:pt-[30px]">
-            <a href="https://www.instagram.com/ravantech.xr/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/ravantech.ia/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <Image
                 src="/icons/instagram.svg"
                 alt="Instagram icon"

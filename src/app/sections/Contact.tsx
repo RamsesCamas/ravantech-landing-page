@@ -1,6 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "";
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "";
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? "";
 
 export const Contact = () => {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -11,8 +16,8 @@ export const Contact = () => {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    const name = String(formData.get("name") || "").trim();
-    const email = String(formData.get("email") || "").trim();
+    const name = String(formData.get("user_name") || "").trim();
+    const email = String(formData.get("from_name") || "").trim();
     const message = String(formData.get("message") || "").trim();
     const honeypot = String(formData.get("company") || "");
 
@@ -36,13 +41,15 @@ export const Contact = () => {
 
     try {
       setStatus("loading");
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message })
-      });
-
-      if (!res.ok) throw new Error("Solicitud fallida");
+      if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+        throw new Error("EmailJS env missing");
+      }
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        form,
+        { publicKey: EMAILJS_PUBLIC_KEY }
+      );
 
       setStatus("success");
       form.reset();
@@ -83,7 +90,7 @@ export const Contact = () => {
             </label>
             <input
               id="name"
-              name="name"
+              name="user_name"
               type="text"
               required
               placeholder="Nombre completo"
@@ -97,7 +104,7 @@ export const Contact = () => {
             </label>
             <input
               id="email"
-              name="email"
+              name="from_name"
               type="email"
               inputMode="email"
               autoComplete="email"
